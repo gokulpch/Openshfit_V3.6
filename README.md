@@ -19,7 +19,7 @@
 
 1. If using on AWS use: https://github.com/gokulpch/Container_Platform_Cloudformation/blob/master/Openshift_1Master_2Worker_Cformation.yaml
 
-This creates required VPC, Subnet, IGW, Security Groups and 3 EC2 Instances (1 Mater and 2 Workers)
+  This creates required VPC, Subnet, IGW, Security Groups and 3 EC2 Instances (1 Mater and 2 Workers)
 
 2. Install Ansible on the Master 
 
