@@ -1,0 +1,38 @@
+[OSEv3:children]
+masters
+etcd
+nodes
+
+[OSEv3:vars]
+ansible_ssh_user=centos
+ansible_sudo=true
+ansible_become=true
+
+deployment_type=origin
+os_sdn_network_plugin_name='redhat/openshift-ovs-multitenant'
+openshift_install_examples=true
+
+openshift_docker_options='--selinux-enabled --insecure-registry 172.30.0.0/16'
+openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/openshift/openshift-passwd'}]
+#Should be one of the worker nodes ip
+osm_default_subdomain=11.12.13.14.xip.io
+openshift_disable_check=disk_availability,docker_storage,memory_availability
+#openshift_metrics_install_metrics=true
+#openshift_metrics_cassandra_storage_type=dynamic
+
+#Only when Using other CNI Modules (Calico, Contrail, Flannel)
+#os_sdn_network_plugin_name='cni'
+#osm_cluster_network_cidr=10.32.0.0/12
+#openshift_portal_net=10.96.0.0/12
+
+
+[masters]
+ip-172-100-92-11.us-west-1.compute.internal
+
+[etcd]
+ip-172-100-92-11.us-west-1.compute.internal
+
+[nodes]
+ip-172-100-92-11.us-west-1.compute.internal openshift_node_labels="{'region':'infra','zone':'west'}" openshift_schedulable=true
+ip-172-100-75-188.us-west-1.compute.internal openshift_node_labels="{'region': 'primary', 'zone': 'west'}"
+ip-172-100-254-38.us-west-1.compute.internal openshift_node_labels="{'region': 'primary', 'zone': 'west'}"
