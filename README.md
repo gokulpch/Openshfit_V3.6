@@ -128,11 +128,23 @@ oc create -f hello-service.json
 
   c. Configure api_key
   
+  Get api_key after registering in <http://www.ultrahook.com/>
+  
   ```
   echo "api_key: vaGhHaKT7Z1t0oid4b40Ijbtqgzj2xSl" > ~/.ultrahook
   ```
 
+11. Configure Github Webhooks
 
+    a. Clone a sample repository
+    
+    ```
+    git clone https://github.com/gokulchandrap/Sample_PHP.git
+    ```
+    
+    b. In Settings Choose Webhooks and provide a webhook name. The format is "http://<hook_name>.<ultrahook_ns>.ultrahook.com/". The hookname should be saved to initiate the session from openshift side.
+    
+    
 
 
 
