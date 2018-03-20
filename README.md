@@ -1,2 +1,3 @@
-# Openshfit_V3.6
-Openshift Installation and S2I using Ultrahook &amp; Github
+# Openshfit (3.6) Installation and Source to Image - Github and Ultrahook 
+
+ 
