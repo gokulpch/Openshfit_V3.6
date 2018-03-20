@@ -2,11 +2,11 @@
 
 ##### Version Information
 
-*OS: CentOS Linux release 7.4
-*Docker version: Docker version 1.13.1
-Openshift Release: 3.6
-Openshift ansible: https://github.com/openshift/openshift-ansible.git
-Openshift ansible branch: origin/release-3.6
+* OS: CentOS Linux release 7.4
+* Docker version: Docker version 1.13.1
+* Openshift Release: 3.6
+* Openshift ansible: https://github.com/openshift/openshift-ansible.git
+* Openshift ansible branch: origin/release-3.6
 
 ##### Demo Topology and Components
 
